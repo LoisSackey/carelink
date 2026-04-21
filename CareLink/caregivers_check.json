@@ -1,0 +1,96 @@
+[
+  {
+    "id": "69d3b6a41438e81df6b28c2f",
+    "name": "Daniel Tetteh",
+    "profilePicture": null,
+    "exists": false
+  },
+  {
+    "id": "69d3c6d81438e81df6b29356",
+    "name": "Grace Amoah",
+    "profilePicture": "/uploads/profiles/profile_69d3c6d81438e81df6b29356_1775486680751.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d3c6d81438e81df6b29356_1775486680751.jpg",
+    "exists": false
+  },
+  {
+    "id": "69cfbacebc35f89fcfb39d16",
+    "name": "Ama Mensah",
+    "profilePicture": null,
+    "exists": false
+  },
+  {
+    "id": "69cfbacfbc35f89fcfb39d19",
+    "name": "Akosua Boateng",
+    "profilePicture": null,
+    "exists": false
+  },
+  {
+    "id": "69cfbacfbc35f89fcfb39d1c",
+    "name": "Kofi Osei",
+    "profilePicture": null,
+    "exists": false
+  },
+  {
+    "id": "69d13dc21438e81df6b2792a",
+    "name": "Akua Serwaa",
+    "profilePicture": "/uploads/profiles/profile_69d13dc21438e81df6b2792a_1775321333425.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d13dc21438e81df6b2792a_1775321333425.jpg",
+    "exists": false
+  },
+  {
+    "id": "69d1496f17c7f58b2aa73650",
+    "name": "Daniel Kusi",
+    "profilePicture": "/uploads/profiles/profile_69d1496f17c7f58b2aa73650_1775323504394.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d1496f17c7f58b2aa73650_1775323504394.jpg",
+    "exists": false
+  },
+  {
+    "id": "69d3a20d1438e81df6b28816",
+    "name": "Gloria Baah",
+    "profilePicture": "/uploads/profiles/profile_69d3a20d1438e81df6b28816_1775477261929.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d3a20d1438e81df6b28816_1775477261929.jpg",
+    "exists": false
+  },
+  {
+    "id": "69d3a2a61438e81df6b28825",
+    "name": "Kingsley Owusu",
+    "profilePicture": "/uploads/profiles/profile_69d3a2a61438e81df6b28825_1775477414797.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d3a2a61438e81df6b28825_1775477414797.jpg",
+    "exists": false
+  },
+  {
+    "id": "69d3a32f1438e81df6b28834",
+    "name": "Mabel Kwarteng",
+    "profilePicture": "/uploads/profiles/profile_69d3a32f1438e81df6b28834_1775477551219.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d3a32f1438e81df6b28834_1775477551219.jpg",
+    "exists": false
+  },
+  {
+    "id": "69d3a3e11438e81df6b28841",
+    "name": "Stephen Teye",
+    "profilePicture": "/uploads/profiles/profile_69d3a3e11438e81df6b28841_1775477729236.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d3a3e11438e81df6b28841_1775477729236.jpg",
+    "exists": false
+  },
+  {
+    "id": "69d3a4991438e81df6b2884e",
+    "name": "Janet Addae",
+    "profilePicture": "/uploads/profiles/profile_69d3a4991438e81df6b2884e_1775477913624.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d3a4991438e81df6b2884e_1775477913624.jpg",
+    "exists": false
+  },
+  {
+    "id": "69d3b0991438e81df6b28a6c",
+    "name": "Kwame Asare",
+    "profilePicture": "/uploads/profiles/profile_69d3b0991438e81df6b28a6c_1775480986085.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d3b0991438e81df6b28a6c_1775480986085.jpg",
+    "exists": false
+  },
+  {
+    "id": "69d3d38dd079506b858ab33d",
+    "name": "abass",
+    "profilePicture": "/uploads/profiles/profile_69d3d38dd079506b858ab33d_1775489933721.jpg",
+    "filePath": "C:\\Users\\User\\Desktop\\CareLink2.0\\CareLink\\backend\\uploads\\profiles\\profile_69d3d38dd079506b858ab33d_1775489933721.jpg",
+    "exists": true
+  }
+]
