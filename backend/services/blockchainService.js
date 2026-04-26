@@ -30,8 +30,7 @@ class BlockchainService {
   }
 
   
-  //Create credential record on blockchain
-  
+  //Create credential record on blockchain  
   async storeCredentialOnBlockchain(credential) {
     try {
       const credentialHash = this.generateCredentialHash(credential);
