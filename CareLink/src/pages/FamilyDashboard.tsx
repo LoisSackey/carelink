@@ -121,7 +121,7 @@ const FamilyDashboard = () => {
   const [userId, setUserId] = useState<string | null>(null);
   const [userLocation, setUserLocation] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState<"overview" | "find" | "history" | "reviews" | "settings">("overview");
+  const [currentPage, setCurrentPage] = useState<"overview" | "find" | "history" | "reviews" | "settings" | "bookings">("overview");
   
   // Location prompt modal state
   const [showLocationPrompt, setShowLocationPrompt] = useState(false);
@@ -155,7 +155,7 @@ const FamilyDashboard = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [notificationFilter, setNotificationFilter] = useState<string>("all");
   const [dismissedNotifications, setDismissedNotifications] = useState<Set<string>>(new Set());
-  const [historyFilter, setHistoryFilter] = useState<'all' | 'completed' | 'pending'>('all');
+  const [historyFilter, setHistoryFilter] = useState<'all' | 'completed' | 'pending' | 'approved'>('all');
 
   // Booking modal state
   const [showBookingModal, setShowBookingModal] = useState(false);
@@ -1625,72 +1625,6 @@ const FamilyDashboard = () => {
           </div>
         )}
 
-        {/* MESSAGES PAGE */}
-        {currentPage === "messages" && (
-          <div className="space-y-6">
-            {/* Header with description */}
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-2">Messages with Caregivers</h2>
-              <p className="text-sm text-muted-foreground">
-                Chat with your caregivers to discuss care details, schedules, and more
-              </p>
-            </div>
-
-            {conversations && conversations.length > 0 ? (
-              <div className="grid gap-4">
-                <div className="text-sm text-muted-foreground font-medium">
-                  {conversations.length} conversation{conversations.length !== 1 ? 's' : ''}
-                </div>
-                {conversations.map((conversation: any) => (
-                  <div
-                    key={conversation.userId || conversation._id}
-                    className="card-elevated p-4 border border-border hover:border-primary/50 hover:bg-secondary/30 transition-all cursor-pointer hover:shadow-md"
-                    onClick={() => {
-                      setSelectedCaregiverForMessaging(conversation.user);
-                      setShowMessagingModal(true);
-                    }}
-                  >
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          <h3 className="font-semibold text-foreground truncate">
-                            {conversation.user?.name || "Unknown Caregiver"}
-                          </h3>
-                          <span className="text-xs px-2 py-1 rounded-full bg-accent/10 text-accent font-medium flex-shrink-0">
-                            Caregiver
-                          </span>
-                        </div>
-                        <p className="text-sm text-muted-foreground truncate">
-                          {conversation.lastMessage || "No messages yet"}
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          {conversation.lastMessageTime ? new Date(conversation.lastMessageTime).toLocaleDateString() : "No messages"}
-                        </p>
-                      </div>
-                      {conversation.unreadCount > 0 && (
-                        <div className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-destructive text-destructive-foreground text-xs font-bold flex-shrink-0">
-                          {conversation.unreadCount}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="p-8 text-center rounded-lg bg-secondary/20 border border-border">
-                <MessageCircle className="h-12 w-12 text-muted-foreground/50 mx-auto mb-3" />
-                <p className="text-foreground font-semibold mb-2">No messages yet</p>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Start by booking a caregiver to begin messaging with them about your care needs
-                </p>
-                <Button onClick={() => setCurrentPage("bookings")} variant="outline">
-                  View My Bookings
-                </Button>
-              </div>
-            )}
-          </div>
-        )}
-
         {/* FIND CAREGIVER PAGE */}
         {currentPage === "find" && (
           <FindCaregiver isEmbedded={true} />
@@ -2033,9 +1967,6 @@ const FamilyDashboard = () => {
             bookingId={selectedBookingForPayment._id}
             amount={selectedBookingForPayment.totalPrice}
             familyName={userName}
-            caregiverPhone={selectedBookingForPayment?.caregiver?.phone || selectedBookingForPayment?.caregiverPhone}
-            caregiverName={selectedBookingForPayment?.caregiver?.name || selectedBookingForPayment?.caregiverName || "Caregiver"}
-            caregiverPaymentInfo={selectedBookingForPayment?.caregiverPaymentInfo}
             onSuccess={(paymentData) => {
               // Refresh bookings after payment
               refreshBookings();
