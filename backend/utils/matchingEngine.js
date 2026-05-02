@@ -169,7 +169,6 @@ class MatchingEngine {
   isRelatedService(type1, type2) {
     const relatedServices = {
       eldercare: ['senior-care', 'mobility-assistance', 'physical-therapy'],
-      childcare: ['infant-care', 'childcare', 'nanny-services'],
       nursing: ['nursing-care', 'medical-care', 'post-operative-care'],
       therapy: ['physical-therapy', 'occupational-therapy', 'rehabilitation'],
     };

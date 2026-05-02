@@ -6,6 +6,5 @@ import App from "./App.tsx";
 import "./index.css";
 
 // Find the HTML element with id="root" in index.html and create a React root
-// The "!" asserts that the root element exists (TypeScript non-null assertion)
 // render(<App />) mounts the entire React application into the DOM root element
 createRoot(document.getElementById("root")!).render(<App />);

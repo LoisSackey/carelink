@@ -8,18 +8,13 @@ let PutObjectCommand;
 let DeleteObjectCommand;
 let getSignedUrl;
 try {
-  // Lazy import so code doesn't crash if SDK not installed
-  // eslint-disable-next-line import/no-extraneous-dependencies
   const aws = await import('@aws-sdk/client-s3');
   S3Client = aws.S3Client;
   PutObjectCommand = aws.PutObjectCommand;
   DeleteObjectCommand = aws.DeleteObjectCommand;
-  // presigner
-  // eslint-disable-next-line import/no-extraneous-dependencies
   const presigner = await import('@aws-sdk/s3-request-presigner');
   getSignedUrl = presigner.getSignedUrl;
 } catch (e) {
-  // AWS SDK not available; continue with local fs fallback
 }
 
 const __filename = fileURLToPath(import.meta.url);
